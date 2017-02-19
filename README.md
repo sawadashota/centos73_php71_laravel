@@ -13,7 +13,7 @@ In this example, app container uses mysql container. So, please set it up before
 $ docker pull mysql
 $ docker pull busybox
 $ docker run -v /var/lib/mysql --name mysql_data busybox
-$ docker run --volumes-from mysql_data --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d -p 3306:3306 mysql
+$ docker run --volumes-from mysql_data --restart=always --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d -p 3306:3306 mysql
 ```
 
 ## Getting Start
