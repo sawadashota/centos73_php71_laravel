@@ -37,4 +37,15 @@ COPY vhost.conf /etc/httpd/conf.d/
 # Auth start systemctl
 RUN systemctl enable httpd.service
 
+# alias
+RUN echo 'alias artisan="php artisan"' >> ~/.bashrc
+RUN echo 'alias g="git"' >> ~/.bashrc
+RUN echo 'alias ls="ls -la"' >> ~/.bashrc
+RUN echo 'alias rm="rm -r"' >> ~/.bashrc
+RUN echo 'alias sb="source ~/.bashrc"' >> ~/.bashrc
+RUN echo 'alias app="cd /var/www/html/app"' >> ~/.bashrc
+
+# vim config
+COPY .vimrc /root/
+
 EXPOSE 80
