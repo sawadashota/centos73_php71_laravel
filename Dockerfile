@@ -36,6 +36,7 @@ COPY vhost.conf /etc/httpd/conf.d/
 
 # Auth start systemctl
 RUN systemctl enable httpd.service
+RUN systemctl enable redis
 
 # alias
 RUN echo 'alias artisan="php artisan"' >> ~/.bashrc
