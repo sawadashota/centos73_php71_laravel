@@ -13,7 +13,7 @@ WORKDIR /root
 # Install PHP7.1
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-RUN yum -y --enablerepo=remi-php71 install php php-fpm php-intl php-mbstring php-xml php-pdo php-mysqlnd php-opcache php-mcrypt
+RUN yum -y --enablerepo=remi-php71 install php php-fpm php-intl php-mbstring php-xml php-pdo php-mysqlnd php-opcache php-mcrypt php-gd
 
 # Install Redis
 RUN yum --enablerepo=epel install -y redis
